@@ -1,0 +1,286 @@
+.cart {
+    padding: 2rem 0;
+}
+
+.cart__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.cart__content {
+    display: flex;
+    gap: 2rem;
+}
+
+.cart__items {
+    flex: 2;
+}
+
+.cart__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart__item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.cart__item-details {
+    flex: 1;
+}
+
+.cart__item-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cart__item-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.cart__item-remove {
+    background: none;
+    border: none;
+    color: #ff3333;
+    cursor: pointer;
+}
+
+.cart__summary {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.cart__subtotal,
+.cart__shipping,
+.cart__total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cart__total {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.cart__checkout {
+    width: 100%;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart__checkout:hover {
+    background-color: #333;
+}
+
+@media (max-width: 768px) {
+    .cart__content {
+        flex-direction: column;
+    }
+}
+/* ... (CSS hiện tại) ... */
+
+.shipping-form {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.shipping-form h2 {
+    margin-bottom: 1rem;
+}
+
+.shipping-form form {
+    display: grid;
+    gap: 1rem;
+}
+
+.shipping-form input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.cart__checkout {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+.cart__checkout:hover {
+    background-color: #45a049;
+}
+.cart {
+    padding: 2rem 0;
+    font-family: Arial, sans-serif;
+}
+
+.cart__title {
+    font-size: 24px;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.cart__content {
+    display: flex;
+    gap: 2rem;
+}
+
+.cart__items {
+    flex: 2;
+}
+
+.cart__item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart__item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.cart__item-details {
+    flex: 1;
+}
+
+.cart__item-name {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.cart__item-price {
+    font-weight: bold;
+    color: #333;
+}
+
+.cart__item-remove {
+    background: none;
+    border: none;
+    color: #ff3333;
+    cursor: pointer;
+}
+
+.cart__summary {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.cart__summary h2 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.cart__subtotal,
+.cart__shipping,
+.cart__total {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cart__total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
+}
+
+.cart__checkout {
+    width: 100%;
+    padding: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cart__checkout:hover {
+    background-color: #45a049;
+}
+
+.shipping-form {
+    margin-top: 2rem;
+}
+
+.shipping-form h2 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.shipping-form form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.shipping-form input,
+.shipping-form select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.shipping-form input::placeholder {
+    color: #999;
+}
+
+.payment-methods {
+    margin-top: 2rem;
+}
+
+.payment-methods h2 {
+    font-size: 18px;
+    margin-bottom: 1rem;
+}
+
+.payment-method {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.payment-method input[type="radio"] {
+    margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .cart__content {
+        flex-direction: column;
+    }
+    
+    .shipping-form form {
+        grid-template-columns: 1fr;
+    }
+}

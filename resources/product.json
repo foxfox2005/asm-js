@@ -1,0 +1,130 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "T-shirt with Tape Details",
+      "price": 120,
+      "rating": 4.5,
+      "image": "../public/frame-32@2x.png",
+      "thumbnails": [
+        "../public/image-2@2x.png",
+        "../public/image-5@2x.png",
+        "../public/image-6@2x.png"
+      ],
+      "description": "A comfortable and stylish T-shirt with tape details, perfect for casual wear.",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["#4F4631", "#FFFFFF", "#808080"]
+    },
+    {
+      "id": 2,
+      "name": "Skinny Fit Jeans",
+      "price": 240,
+      "rating": 3.5,
+      "image": "../public/image-8@2x.png",
+      "thumbnails": [
+        "../public/image-2@2x.png",
+        "../public/image-5@2x.png",
+        "../public/image-6@2x.png"
+      ],
+      "description": "Trendy skinny fit jeans that complement your style.",
+      "sizes": ["28", "30", "32", "34"],
+      "colors": ["#0000FF", "#000000", "#808080"],
+      "originalPrice": 260,
+      "discount": 20
+    },
+    {
+      "id": 3,
+      "name": "Checkered Shirt",
+      "price": 180,
+      "rating": 4.5,
+      "image": "../public/frame-34@2x.png",
+      "thumbnails": [
+        "../public/image-2@2x.png",
+        "../public/image-5@2x.png",
+        "../public/image-6@2x.png"
+      ],
+      "description": "A classic checkered shirt for a smart casual look.",
+      "sizes": ["S", "M", "L", "XL", "XXL"],
+      "colors": ["#8B0000", "#0000FF", "#008000"]
+    },
+    {
+      "id": 4,
+      "name": "Sleeve Striped T-shirt",
+      "price": 130,
+      "rating": 4.5,
+      "image": "../public/frame-38@2x.png",
+      "thumbnails": [
+        "../public/image-2@2x.png",
+        "../public/image-5@2x.png",
+        "../public/image-6@2x.png"
+      ],
+      "description": "A trendy striped T-shirt with unique sleeve design.",
+      "sizes": ["XS", "S", "M", "L"],
+      "colors": ["#FFFFFF", "#0000FF"],
+      "originalPrice": 160,
+      "discount": 30
+    },
+    {
+      "id": 5,
+      "name": "Vertical Striped Shirt",
+      "price": 212,
+      "rating": 5.0,
+      "image": "../public/frame-32-1@2x.png",
+      "thumbnails": [
+        "../public/image-2@2x.png",
+        "../public/image-5@2x.png",
+        "../public/image-6@2x.png"
+      ],
+      "description": "A stylish vertical striped shirt for a modern look.",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["#008000", "#0000FF"],
+      "originalPrice": 232,
+      "discount": 20
+    },
+    {
+      "id": 6,
+      "name": "Courage Graphic T-shirt",
+      "price": 145,
+      "rating": 4.0,
+      "image": "../public/frame-33@2x.png",
+      "thumbnails": [
+        "../public/image-2@2x.png",
+        "../public/image-5@2x.png",
+        "../public/image-6@2x.png"
+      ],
+      "description": "Express yourself with this bold graphic T-shirt.",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["#FFA500", "#FFFFFF", "#000000"]
+    },
+    {
+      "id": 7,
+      "name": "Loose Fit Bermuda Shorts",
+      "price": 80,
+      "rating": 3.0,
+      "image": "../public/frame-34-1@2x.png",
+      "thumbnails": [
+        "../public/image-2@2x.png",
+        "../public/image-5@2x.png",
+        "../public/image-6@2x.png"
+      ],
+      "description": "Comfortable loose fit bermuda shorts for a relaxed style.",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["#F5F5DC", "#000080", "#808000"]
+    },
+    {
+      "id": 8,
+      "name": "Faded Skinny Jeans",
+      "price": 210,
+      "rating": 4.5,
+      "image": "../public/image-10@2x.png",
+      "thumbnails": [
+        "../public/image-2@2x.png",
+        "../public/image-5@2x.png",
+        "../public/image-6@2x.png"
+      ],
+      "description": "Trendy faded skinny jeans for a stylish casual look.",
+      "sizes": ["28", "30", "32", "34", "36"],
+      "colors": ["#ADD8E6", "#00008B"]
+    }
+  ]
+}

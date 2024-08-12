@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail - FoxFox</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="product-detail.css">
+
+
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__logo">FoxFox</div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li><a href="index.html" class="header__nav-link">Shop</a></li>
+                <li><a href="#on-sale" class="header__nav-link">On Sale</a></li>
+                <li><a href="#new-arrivals" class="header__nav-link">New Arrivals</a></li>
+                <li><a href="#brands" class="header__nav-link">Brands</a></li>
+            </ul>
+        </nav>
+        <div class="header__search">
+            <input type="text" placeholder="Search for products..." class="header__search-input">
+            <img src="../public/frame-1.svg" alt="Search" class="header__search-icon">
+        </div>
+        <div class="header__actions">
+            <a href="../cart/cart.html" class="header__action-link" id="cartLink">
+                <img src="../public/frame-2.svg" alt="Cart" class="header__action-icon">
+                <span class="header__cart-count" id="cartCount">0</span>
+            </a>
+            <a href="#language" class="header__action-link">
+                <img src="../public/frame-3.svg" alt="Language" class="header__action-icon">
+            </a>
+        </div>
+    </div>
+</header>  
+
+    <main class="product-detail">
+        <div class="container">
+            <div class="product-detail__content">
+                <div class="product-detail__gallery">
+                    <div class="product-detail__main-image">
+                        <!-- Main product image will be inserted here -->
+                    </div>
+                    <div class="product-detail__thumbnails">
+                        <!-- Thumbnail images will be inserted here -->
+                    </div>
+                </div>
+                <div class="product-detail__info">
+                    <h1 class="product-detail__title"><!-- Product title will be inserted here --></h1>
+                    <div class="product-detail__rating">
+                        <!-- Rating stars and count will be inserted here -->
+                    </div>
+                    <div class="product-detail__price">
+                        <!-- Price information will be inserted here -->
+                    </div>
+                    <p class="product-detail__description">
+                        <!-- Product description will be inserted here -->
+                    </p>
+                    <div class="product-detail__options">
+                        <div class="product-detail__size-options">
+                            <h3>Select Size</h3>
+                            <!-- Size options will be inserted here -->
+                        </div>
+                        <div class="product-detail__color-options">
+                            <h3>Select Color</h3>
+                            <!-- Color options will be inserted here -->
+                        </div>
+                    </div>
+                    <div class="product-detail__actions">
+                        <div class="product-detail__quantity">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" max="99" id="productQuantity">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                        <button class="product-detail__add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3 class="footer__logo">FoxFox</h3>
+                    <p class="footer__description">We have clothes that suits your style and which you're proud to wear. From women to men.</p>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link"><img src="../public/1.svg" alt="Facebook" class="footer__social-icon"></a>
+                        <a href="#" class="footer__social-link"><img src="../public/2.svg" alt="Twitter" class="footer__social-icon"></a>
+                        <a href="#" class="footer__social-link"><img src="../public/3.svg" alt="Instagram" class="footer__social-icon"></a>
+                        <a href="#" class="footer__social-link"><img src="../public/4.svg" alt="Github" class="footer__social-icon"></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__link-column">
+                        <h4 class="footer__link-title">Company</h4>
+                        <ul class="footer__link-list">
+                            <li><a href="#about" class="footer__link">About</a></li>
+                            <li><a href="#features" class="footer__link">Features</a></li>
+                            <li><a href="#works" class="footer__link">Works</a></li>
+                            <li><a href="#career" class="footer__link">Career</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link-column">
+                        <h4 class="footer__link-title">Help</h4>
+                        <ul class="footer__link-list">
+                            <li><a href="#support" class="footer__link">Customer Support</a></li>
+                            <li><a href="#delivery" class="footer__link">Delivery Details</a></li>
+                            <li><a href="#terms" class="footer__link">Terms & Conditions</a></li>
+                            <li><a href="#privacy" class="footer__link">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link-column">
+                        <h4 class="footer__link-title">FAQ</h4>
+                        <ul class="footer__link-list">
+                            <li><a href="#account" class="footer__link">Account</a></li>
+                            <li><a href="#orders" class="footer__link">Manage Deliveries</a></li>
+                            <li><a href="#orders" class="footer__link">Orders</a></li>
+                            <li><a href="#payments" class="footer__link">Payments</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__link-column">
+                        <h4 class="footer__link-title">Resources</h4>
+                        <ul class="footer__link-list">
+                            <li><a href="#ebooks" class="footer__link">Free eBooks</a></li>
+                            <li><a href="#tutorials" class="footer__link">Development Tutorial</a></li>
+                            <li><a href="#blog" class="footer__link">How to - Blog</a></li>
+                            <li><a href="#youtube" class="footer__link">YouTube Playlist</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2023 FoxFox. All rights reserved.</p>
+                <div class="footer__payment-methods">
+                    <img src="../public/badge.svg" alt="Payment Method 1" class="footer__payment-icon">
+                    <img src="../public/badge-1.svg" alt="Payment Method 2" class="footer__payment-icon">
+                    <img src="../public/badge-2.svg" alt="Payment Method 3" class="footer__payment-icon">
+                    <img src="../public/badge-3.svg" alt="Payment Method 4" class="footer__payment-icon">
+                    <img src="../public/badge-4.svg" alt="Payment Method 5" class="footer__payment-icon">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="product-detail.js"></script>
+</body>
+</html>
