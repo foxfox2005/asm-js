@@ -15,13 +15,15 @@
                 <li><a href="index.html" class="header__nav-link">Shop</a></li>
                 <li><a href="index.html" class="header__nav-link">On Sale</a></li>
                 <li><a href="#new-arrivals" class="header__nav-link">New Arrivals</a></li>
-                <li><a href="#brands" class="header__nav-link">Brands</a></li>
+                <li><a href="#brands" class="header__nav-link">Top Selling</a></li>
             </ul>
         </nav>
-        <div class="header__search">
-            <input type="text" placeholder="Search for products..." class="header__search-input">
+        <form class="header__search">
+        <input type="text" placeholder="Search for products..." class="header__search-input">
+        <button type="submit" class="header__search-button">
             <img src="../public/frame-1.svg" alt="Search" class="header__search-icon">
-        </div>
+        </button>
+        </form>
         <div class="header__actions">
             <a href="./cart/cart.html" class="header__action-link" id="cartLink">
                 <img src="../public/frame-2.svg" alt="Cart" class="header__action-icon">
@@ -35,33 +37,34 @@
 </header>
 
     <main>
-        <section class="hero">
-            <div class="hero__background">
-                <img src="./public/rectangle-2@2x.png" alt="Stylish couple wearing Calvin Klein" class="hero__background-image">
-            </div>
-            <div class="container">
-                <div class="hero__content">
-                    <h1 class="hero__title">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
-                    <p class="hero__text">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
-                    <button class="hero__cta-button">Shop Now</button>
-                    <div class="hero__stats">
-                        <div class="hero__stat-item">
-                            <span class="hero__stat-number">200+</span>
-                            <span class="hero__stat-label">International Brands</span>
-                        </div>
-                        <div class="hero__stat-item">
-                            <span class="hero__stat-number">2,000+</span>
-                            <span class="hero__stat-label">High-Quality Products</span>
-                        </div>
-                        <div class="hero__stat-item">
-                            <span class="hero__stat-number">30,000+</span>
-                            <span class="hero__stat-label">Happy Customers</span>
-                        </div>
+        <section class="hero" role="main">
+        <div class="hero__slideshow">
+            <!-- Slideshow images will be added here dynamically -->
+        </div>
+        <div class="container">
+            <div class="hero__content">
+                <h1 class="hero__title">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
+                <p class="hero__text">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+                <button class="hero__cta-button">Shop Now</button>
+                <div class="hero__stats">
+                    <div class="hero__stat-item">
+                        <span class="hero__stat-number">200+</span>
+                        <span class="hero__stat-label">International Brands</span>
+                    </div>
+                    <div class="hero__stat-item">
+                        <span class="hero__stat-number">2,000+</span>
+                        <span class="hero__stat-label">High-Quality Products</span>
+                    </div>
+                    <div class="hero__stat-item">
+                        <span class="hero__stat-number">30,000+</span>
+                        <span class="hero__stat-label">Happy Customers</span>
                     </div>
                 </div>
             </div>
-            <div class="hero__brand">Calvin Klein</div>
-        </section>
+        </div>
+        <div class="hero__brand">Calvin Klein</div>
+    </section>
+
 
         <section id="new-arrivals" class="product-section">
             <div class="container">
@@ -149,5 +152,10 @@
         </div>
     </footer>
     <script src="index.js"></script>
+        <script>
+        document.querySelector('.header__logo').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
 </body>
 </html>

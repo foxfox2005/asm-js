@@ -3,81 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Detail - FoxFox</title>
+    <title>Checkout - FoxFox</title>
     <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="product-detail.css">
-
-
+    <link rel="stylesheet" href="checkout.css">
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <div class="header__logo">FoxFox</div>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li><a href="../index.html" class="header__nav-link">Shop</a></li>
-                <li><a href="#on-sale" class="header__nav-link">On Sale</a></li>
-                <li><a href="../index.html#new-arrivals" class="header__nav-link">New Arrivals</a></li>
-                <li><a href="../index.html#top-selling" class="header__nav-link">Top Selling</a></li>
-            </ul>
-        </nav>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">FoxFox</div>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li><a href="../index.html" class="header__nav-link">Shop</a></li>
+                    <li><a href="#on-sale" class="header__nav-link">On Sale</a></li>
+                    <li><a href="../index.html#new-arrivals" class="header__nav-link">New Arrivals</a></li>
+                    <li><a href="../index.html#top-selling" class="header__nav-link">Top Selling</a></li>
+                </ul>
+            </nav>
             <form class="header__search">
             <input type="text" placeholder="Search for products..." class="header__search-input">
             <button type="submit" class="header__search-button">
                 <img src="../public/frame-1.svg" alt="Search" class="header__search-icon">
             </button>
             </form>
-        <div class="header__actions">
-            <a href="../cart/cart.html" class="header__action-link" id="cartLink">
-                <img src="../public/frame-2.svg" alt="Cart" class="header__action-icon">
-                <span class="header__cart-count" id="cartCount">0</span>
-            </a>
-            <a href="#language" class="header__action-link">
-                <img src="../public/frame-3.svg" alt="Language" class="header__action-icon">
-            </a>
+            <div class="header__actions">
+                <a href="./cart/cart.html" class="header__action-link" id="cartLink">
+                    <img src="../public/frame-2.svg" alt="Cart" class="header__action-icon">
+                    <span class="header__cart-count" id="cartCount">0</span>
+                </a>
+                <a href="#language" class="header__action-link">
+                    <img src="../public/frame-3.svg" alt="Language" class="header__action-icon">
+                </a>
+            </div>
         </div>
-    </div>
-</header>  
+    </header>
 
-    <main class="product-detail">
+    <main class="checkout">
         <div class="container">
-            <div class="product-detail__content">
-                <div class="product-detail__gallery">
-                    <div class="product-detail__main-image">
-                        <!-- Main product image will be inserted here -->
-                    </div>
-                    <div class="product-detail__thumbnails">
-                        <!-- Thumbnail images will be inserted here -->
-                    </div>
-                </div>
-                <div class="product-detail__info">
-                    <h1 class="product-detail__title"><!-- Product title will be inserted here --></h1>
-                    <div class="product-detail__rating">
-                        <!-- Rating stars and count will be inserted here -->
-                    </div>
-                    <div class="product-detail__price">
-                        <!-- Price information will be inserted here -->
-                    </div>
-                    <p class="product-detail__description">
-                        <!-- Product description will be inserted here -->
-                    </p>
-                    <div class="product-detail__options">
-                        <div class="product-detail__size-options">
-                            <h3>Select Size</h3>
-                            <!-- Size options will be inserted here -->
-                        </div>
-                        <div class="product-detail__color-options">
-                            <h3>Select Color</h3>
-                            <!-- Color options will be inserted here -->
-                        </div>
-                    </div>
-                    <div class="product-detail__actions">
-                        <div class="product-detail__quantity">
-                            <button class="quantity-btn minus">-</button>
-                            <input type="number" value="1" min="1" max="99" id="productQuantity">
-                            <button class="quantity-btn plus">+</button>
-                        </div>
-                        <button class="product-detail__add-to-cart">Add to Cart</button>
+            <h1 class="checkout__title">Checkout</h1>
+            <div class="checkout__content">
+                <form id="checkoutForm" class="checkout__form">
+                    <h2>Shipping Information</h2>
+                    <input type="text" id="fullName" placeholder="Full Name" required>
+                    <input type="tel" id="phone" placeholder="Phone Number" required>
+                    <input type="text" id="address" placeholder="Address" required>
+                    <h2>Payment Method</h2>
+                    <select id="paymentMethod" required>
+                        <option value="">Select Payment Method</option>
+                        <option value="credit_card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank_transfer">Bank Transfer</option>
+                    </select>
+                    <button type="submit" class="checkout__submit">Complete Payment</button>
+                </form>
+                <div class="checkout__summary">
+                    <h2>Order Summary</h2>
+                    <div id="orderItems"></div>
+                    <div class="checkout__total">
+                        Total: <span id="orderTotal"></span>
                     </div>
                 </div>
             </div>
@@ -148,7 +130,8 @@
             </div>
         </div>
     </footer>
-    <script src="product-detail.js"></script>
+
+    <script src="checkout.js"></script>
             <script>
         document.querySelector('.header__logo').addEventListener('click', function() {
             window.location.href = '../index.html';

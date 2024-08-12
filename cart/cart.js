@@ -89,30 +89,7 @@ function handleCheckout() {
     alert("Your cart is empty.");
     return;
   }
-
-  // Mô phỏng quá trình thanh toán
-  simulatePaymentProcess(cart)
-    .then(() => {
-      alert("Payment successful! Your order has been placed.");
-      clearCart();
-    })
-    .catch((error) => {
-      alert(`Payment failed: ${error.message}`);
-    });
-}
-
-function simulatePaymentProcess(cart) {
-  return new Promise((resolve, reject) => {
-    // Mô phỏng quá trình xử lý thanh toán
-    setTimeout(() => {
-      const isSuccessful = Math.random() < 0.8; // 80% cơ hội thành công
-      if (isSuccessful) {
-        resolve();
-      } else {
-        reject(new Error("Transaction declined"));
-      }
-    }, 2000); // Đợi 2 giây để mô phỏng quá trình xử lý
-  });
+  window.location.href = "checkout.html";
 }
 
 function clearCart() {

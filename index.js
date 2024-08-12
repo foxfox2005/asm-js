@@ -12,38 +12,46 @@ async function loadProducts() {
 }
 
 function renderProducts() {
-    const newArrivalsGrid = document.getElementById('new-arrivals-grid');
-    const topSellingGrid = document.getElementById('top-selling-grid');
-    
-    // Render first 4 products as New Arrivals
-    const newArrivalsHTML = products.slice(0, 4).map(createProductCard).join('');
-    newArrivalsGrid.innerHTML = newArrivalsHTML;
-    
-    // Render last 4 products as Top Selling
-    const topSellingHTML = products.slice(-4).map(createProductCard).join('');
-    topSellingGrid.innerHTML = topSellingHTML;
-    
-    addProductClickListeners();
+  const newArrivalsGrid = document.getElementById("new-arrivals-grid");
+  const topSellingGrid = document.getElementById("top-selling-grid");
+
+  const newArrivalsHTML = products.slice(0, 4).map(createProductCard).join("");
+  newArrivalsGrid.innerHTML = newArrivalsHTML;
+
+  const topSellingHTML = products.slice(-4).map(createProductCard).join("");
+  topSellingGrid.innerHTML = topSellingHTML;
+
+  addProductClickListeners();
 }
 
-// ... (existing code)
-
 function createProductCard(product) {
-    return `
+  return `
         <div class="product-card" data-product-id="${product.id}">
-            <img src="${product.image}" alt="${product.name}" class="product-card__image">
+            <img src="${product.image}" alt="${
+    product.name
+  }" class="product-card__image">
             <div class="product-card__info">
                 <h3 class="product-card__title">${product.name}</h3>
                 <div class="product-card__rating">
-                    <span class="product-card__rating-stars">${'★'.repeat(Math.floor(product.rating))}${'☆'.repeat(5 - Math.floor(product.rating))}</span>
-                    <span class="product-card__rating-number">${product.rating}/5</span>
+                    <span class="product-card__rating-stars">${"★".repeat(
+                      Math.floor(product.rating)
+                    )}${"☆".repeat(5 - Math.floor(product.rating))}</span>
+                    <span class="product-card__rating-number">${
+                      product.rating
+                    }/5</span>
                 </div>
                 <div class="product-card__price">
-                    <span class="product-card__price-current">$${product.price}</span>
-                    ${product.discount ? `
+                    <span class="product-card__price-current">$${
+                      product.price
+                    }</span>
+                    ${
+                      product.discount
+                        ? `
                         <span class="product-card__price-original">$${product.originalPrice}</span>
                         <span class="product-card__discount">-${product.discount}%</span>
-                    ` : ''}
+                    `
+                        : ""
+                    }
                 </div>
             </div>
         </div>
@@ -60,7 +68,6 @@ function addProductClickListeners() {
   });
 }
 
-
 function updateCartCount() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -71,8 +78,30 @@ function updateCartCount() {
   }
 }
 
+function setupSlideshow() {
+  const slideshowContainer = document.querySelector(".hero__slideshow");
+  const images = ["./public/rectangle-2@2x.png", "./public/1.png"];
+
+  images.forEach((img, index) => {
+    const slide = document.createElement("div");
+    slide.className = `hero__slide ${index === 0 ? "active" : ""}`;
+    slide.style.backgroundImage = `url(${img})`;
+    slideshowContainer.appendChild(slide);
+  });
+
+  let currentSlide = 0;
+  setInterval(() => {
+    const slides = document.querySelectorAll(".hero__slide");
+    slides[currentSlide].classList.remove("active");
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add("active");
+  }, 5000); // Change slide every 5 seconds
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   loadProducts();
-  updateCartCount(); 
+  updateCartCount();
+  setupSlideshow();
 });
+
 document.addEventListener("DOMContentLoaded", loadProducts);
